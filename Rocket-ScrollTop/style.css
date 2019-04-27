@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  width: 100vw;
+  height: 300vh;
+  background: linear-gradient(to bottom, #c0392b, #16a085, #2980b9);
+}
+.wrap p {
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 100px;
+}
+.rocket {
+  width: 30px;
+  height: 60px;
+  background: url(./rocket.png) top;
+  background-size: cover;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: none;
+}
+.rocket:hover {
+  background-position: bottom;
+}

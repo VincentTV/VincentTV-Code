@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #111;
+}
+.box { 
+  width: 200px;
+  height: 200px;
+  background: url(./bg.jpg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.box::before, .box::after {
+  content: '';
+  border: 2px solid #2ecc71;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -15px;
+  /* clip: rect(top, right, bottom, left) */
+  -webkit-animation: borderClip 8s linear infinite;
+          animation: borderClip 8s linear infinite;
+}
+.box::after {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+.box:hover::before, .box:hover::after {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes borderClip {
+  0%, 100% {
+    clip: rect(0px, 230px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 230px, 0px);
+  }
+  50% {
+    clip: rect(228px, 230px, 230px, 0px);
+  }
+  75% {
+    clip: rect(0px, 230px, 230px, 228px);
+  }
+}
+@keyframes borderClip {
+  0%, 100% {
+    clip: rect(0px, 230px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 230px, 0px);
+  }
+  50% {
+    clip: rect(228px, 230px, 230px, 0px);
+  }
+  75% {
+    clip: rect(0px, 230px, 230px, 228px);
+  }
+}
