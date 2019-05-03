@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Like - Click Effect @VincentTV</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+    }
+    .middle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrap {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+    .content-wrap {
+      height: 80%;
+      background-color: #000;
+      color: #fff;
+      user-select: none;
+    }
+    .like-wrap {
+      height: 20%;
+      font-size: 20px;
+      color: #ccc;
+      cursor: pointer;
+      user-select: none;
+    }
+    .like-active {
+      color: red;
+    }
+    .like {
+      position: absolute;
+      color: #ccc;
+      font-size: 20px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="middle">
+  <div class="wrap">
+    <div class="content-wrap middle"><p>I am content</br>@VincentTV</p></div>
+    <div class="like-wrap middle"><i class="fas fa-heart"></i><span>Like</span></div>
+  </div>
+
+  <script src="./addLike.js"></script>
+
+<!--  B站：@VincentTV
+      Share with you
+      主页：https://space.bilibili.com/402141442 
+      本视频：https://www.bilibili.com/video/av51351273/
+-->
+
+</body>
+</html>
