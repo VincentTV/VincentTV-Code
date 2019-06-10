@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Neon Text</title>
+  <link href="https://fonts.font.im/css?family=Monoton" rel="stylesheet">
+  <!-- 注意：google字体可能有时候会抽风，所以最好是直接下载或者找国内字体或国内的CDN替代 -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #000;
+    }
+    .neon-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .neon-wrap span {
+      display: block;
+    }
+    .neon-text {
+      font-family: 'Monoton', cursive;
+      font-size: 100px;
+      animation: neon 4s infinite;
+    }
+    .neon-by {
+      color: #e91e63;
+      text-shadow: -3px 0px 5px #e91e63, 0px 0px 2px #e91e63;
+    }
+    @keyframes neon {
+      0%, 30%, 32%, 34% {
+        color: #222;
+        text-shadow: -3px 0px 5px #222, 0px 0px 2px #222; 
+      }
+      31%, 33%, 35%, 100% {
+        color: #e91e63;
+        text-shadow: -3px 0px 5px #e91e63, 0px 0px 2px #e91e63;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="neon-wrap">
+    <span class="neon-text">CSS</span>
+    <span class="neon-by">by @VincentTV</span>
+  </div>
+</body>
+</html>
