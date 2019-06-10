@@ -15,6 +15,8 @@
 
 |#|视频|源码|
 |:---:|:----:|:-----:|
+|8|[霓虹灯字体闪烁特效](https://www.bilibili.com/video/av54768012/ "霓虹灯字体闪烁特效")|[NeonText-CSS3](./NeonText-CSS3)|
+|7|[原生JS冒泡动画](https://www.bilibili.com/video/av52296076/ "原生JS冒泡动画")|[BubbleUp-JSanimation](./BubbleUp-JSanimation)|
 |6|[原生JS点赞特效](https://www.bilibili.com/video/av51351273/ "原生JS点赞特效")|[Like-ClickEffects](./Like-ClickEffects)|
 |5|[复联轮播Banner](https://www.bilibili.com/video/av50437887 "复联轮播Banner")|[Avengers-Swiper](./Avengers-Swiper)|
 |4|[3D立方体](https://www.bilibili.com/video/av49984936 "3D立方体")|[3D-Cube](./3D-Cube)|
