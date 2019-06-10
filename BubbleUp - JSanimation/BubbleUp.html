@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BubbleUp @VincentTV</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      width: 100vw;
+      height: 100vh;
+      background-image: url(https://images.unsplash.com/photo-1551797802-f2dd1ec0033e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80);
+      background-size: cover;
+      background-position: center center;
+    }
+    .bubbles {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .bubble {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -10%;
+      animation: up 8s ease-in-out;
+    }
+    @keyframes up {
+      from {
+        bottom: -10%;
+        opacity: 1;
+      }
+      to {
+        bottom: 110%;
+        opacity: .5;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="bubbles" num="50" duration="10">
+    </div>
+  </div>
+
+  <script>
+    (function(w, d) {
+
+      var bubbles = d.querySelector('.bubbles');
+      var bubblesWidth = bubbles.clientWidth;
+      var num = bubbles.getAttribute('num');
+      var duration = bubbles.getAttribute('duration');
+
+      bubbleUp();
+      setInterval(bubbleUp, duration * 1000);
+
+      function bubbleUp() {
+        bubbles.innerHTML = '';
+        for(var i = 0; i < num; i++) {
+          var bubbleDiv = d.createElement('div');
+          bubbleDiv.classList.add('bubble');
+          bubbleDiv.style.cssText = `
+            transform: translate(${bubblesWidth * Math.random()}px, 0) scale(${5 * Math.random()});
+            animation: up ${duration * Math.random() + 1}s ease-in-out;
+          `
+          bubbles.appendChild(bubbleDiv);
+        };
+      };
+
+    })(window, document);
+  </script>
+</body>
+</html>
