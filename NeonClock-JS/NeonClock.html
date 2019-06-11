@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Neon Clock - by VincentTV</title>
+  <link href="https://fonts.font.im/css?family=Monoton" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      background: url(./bg.jpg) center center;
+      background-size: cover;
+    }
+    .neon-wrap {
+      width: 100vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .neon-text {
+      font-family: 'Monoton', cursive;
+      font-size: 50px;
+      color: #bbdefb;
+      text-shadow: -3px 0px 5px #bbdefb, 0px 0px 2px #bbdefb;
+    }
+    .neon-blink {
+      animation: neon 4s infinite;
+    }
+    .neon-clock {
+      font-family: 'Monoton', cursive;
+      font-size: 80px;
+      color: #FFEB3B;
+      text-shadow: -3px 0px 5px #FFEB3B, 0px 0px 2px #FFEB3B;
+    }
+    .neon-by {
+      color: #bbdefb;
+      text-shadow: -3px 0px 5px #bbdefb, 0px 0px 2px #bbdefb;
+    }
+    @keyframes neon {
+      0%, 30%, 32%, 34% {
+        color: #222;
+        text-shadow: -3px 0px 5px #222, 0px 0px 2px #222; 
+      }
+      31%, 33%, 35%, 100% {
+        color: #bbdefb;
+        text-shadow: -3px 0px 5px #bbdefb, 0px 0px 2px #bbdefb;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="neon-wrap">
+    <div class="neon-text">
+      CL<span class="neon-blink">O</span>C<span class="neon-blink">K</span>
+    </div>
+    <div class="neon-clock">
+      <span class="timer-num">1</span>
+      <span class="timer-num">2</span>
+      <span class="timer-sep">:</span>
+      <span class="timer-num">4</span>
+      <span class="timer-num">5</span>
+      <span class="timer-sep">:</span>
+      <span class="timer-num">7</span>
+      <span class="timer-num">8</span>
+    </div>
+    <div class="neon-by">by @VincentTV</div>
+  </div>
+
+  <script>
+    (function(w, d){
+
+      var timerCache = '',  //时间缓存
+          timerNum = d.querySelectorAll('.timer-num');  //取得dom对象
+
+      // 计时器，200ms执行一次
+      setInterval(timerUpdata, 200);
+
+      // 时间更新
+      function timerUpdata(){
+        var timerArr = timerHandler(new Date());
+        // 时间不变时立即返回
+        if(timerArr == null){
+          return;
+        }
+        //时间更新 dom
+        timerNum.forEach(function(element, index){
+          element.innerHTML = timerArr ? timerArr[index] : '-';//三元运算符，数组存在就替换
+        });
+      }
+
+      /**
+      * 时间数据处理
+      * @param {dateObj} 形参时间对象
+      * @returns {Array} 返回时间数组
+      */
+      function timerHandler(dateObj){
+        var hours = ('0' + dateObj.getHours()).slice(-2); //加 0 防止出现一位数
+        var min = ('0' + dateObj.getMinutes()).slice(-2); //通过slice 截取最后两位
+        var sec = ('0' + dateObj.getSeconds()).slice(-2);
+        var timerStr = hours + min + sec;
+        // 时间不变时返回null
+        if(timerStr == timerCache) {
+          return null;
+        }
+        timerCache = timerStr;//时间改变，更新缓存
+        return timerStr.split(''); //字符串转换数组，并返回
+      }
+    })(window, document);
+
+    /*
+    * B站：@VincentTV
+    * Share with you
+    * 主页：https://space.bilibili.com/402141442 
+    * 本视频：https://www.bilibili.com/video/av55264319/
+    * */
+
+  </script>
+
+</body>
+</html>
