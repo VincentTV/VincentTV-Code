@@ -7,14 +7,15 @@
 | Author | [VincentTV](https://space.bilibili.com/402141442 "B站") |
 |:---:|:---:
 | B站 | https://space.bilibili.com/402141442 |
-| 备注 | 欢迎大家到B站点赞喔，哈哈哈，谢谢大家支持 |
+| 备注 | 如果对你有帮助，B站点个赞呗，谢谢大家支持 |
 
 
 ****
-### 点击文字跳转
+>### 点击文字跳转
 
 |#|视频|源码|
 |:---:|:----:|:-----:|
+|9|[JS霓虹动态时钟](https://www.bilibili.com/video/av55264319/ "JS霓虹动态时钟")|[NeonClock-JS](./NeonClock-JS)|
 |8|[霓虹灯字体闪烁特效](https://www.bilibili.com/video/av54768012/ "霓虹灯字体闪烁特效")|[NeonText-CSS3](./NeonText-CSS3)|
 |7|[原生JS冒泡动画](https://www.bilibili.com/video/av52296076/ "原生JS冒泡动画")|[BubbleUp-JSanimation](./BubbleUp-JSanimation)|
 |6|[原生JS点赞特效](https://www.bilibili.com/video/av51351273/ "原生JS点赞特效")|[Like-ClickEffects](./Like-ClickEffects)|
