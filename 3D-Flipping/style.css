@@ -57,8 +57,8 @@ body {
   background-color: #2c3e50;
 }
 .wrap:hover .front {
-  transform: perspective(900px) rotateY(-40deg);
+  transform: perspective(900px) rotateY(-180deg);
 }
 .wrap:hover .back {
-  transform: perspective(900px) rotateY(140deg);
+  transform: perspective(900px) rotateY(00deg);
 }
