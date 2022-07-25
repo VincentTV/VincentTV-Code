@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luck Wheel</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        margin: 20px;
+        text-align: center;
+      }
+      .pointer-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      #pointer {
+        height: 400px;
+        transition: transform 3000ms ease-in-out;
+      }
+      .btn-wrap {
+        text-align: center;
+      }
+      .btn {
+        width: 150px;
+        height: 40px;
+        background-color: cornflowerblue;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px #ccc;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Luck Wheel</h1>
+    <div class="pointer-wrap">
+      <img id="pointer" src="./green_bottle.png" alt="pointer" />
+    </div>
+    <div class="btn-wrap">
+      <button id="btn" class="btn">Run</button>
+    </div>
+
+    <script>
+      let angle = 0
+      const pointer = document.querySelector('#pointer')
+      const btn = document.querySelector('#btn')
+
+      btn.addEventListener('click', function () {
+        angle = angle + 2 * 360 + Math.random() * 360
+        pointer.style.transform = `rotate(${angle}deg)`
+      })
+    </script>
+  </body>
+</html>
